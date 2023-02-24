@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	struct name
+	{
+		char fname[10];
+		char mname[10];
+		char lname[10];
+	}n;
+	struct dob
+	{
+		int mon;
+		int date;
+		int year;
+	}d;
+	struct data
+	{
+	struct name n;
+	struct dob d;
+    }dt;
+    printf("enter fname,mname,lname\n");
+    scanf("%s%s%s",dt.n.fname,dt.n.mname,dt.n.lname);
+    printf("enter date,month,year\n");
+    scanf("%d%d%d",&dt.d.date,&dt.d.mon,&dt.d.year);
+    printf("%s%s\t%s\n",dt.n.fname,dt.n.mname,dt.n.lname);
+    printf("%d-%d-%d",dt.d.date,dt.d.mon,dt.d.year);    
+}
